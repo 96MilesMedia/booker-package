@@ -4,7 +4,7 @@ The Booking Extension for Twenty Six Digital restaurant clients Content Manageme
 
 ## Getting Started
 
-`composer install booker-package`
+`composer require twentysix/booker`
 
 Ensure the autoload is set in composer.json:
 
