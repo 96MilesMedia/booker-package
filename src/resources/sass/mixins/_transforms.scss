@@ -1,0 +1,30 @@
+@mixin vertial-middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin vertial-middle--third {
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+@mixin vertial-middle--fourth {
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+@mixin vh-center {
+    top: 25%;
+    left: 25%;
+    transform: translateY(-25%, -25%);
+}
+
+@mixin h-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin hoz-middle {
+    left: 50%;
+    transform: translateX(-50%);
+}

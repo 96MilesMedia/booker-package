@@ -1,0 +1,60 @@
+input,
+textarea
+button {
+    //-webkit-appearance: none;
+}
+
+.input {
+    border: 1px solid $black;
+    height: 3em;
+    padding: 0.8em;
+    color: #30373b;
+    width: 100%;
+    @include rem(16px);
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+select {
+    width: 100%;
+}
+
+/**
+ * Form Element
+ */
+
+.form {
+
+}
+
+.field {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 16px;
+
+    label {
+        @include rem(20px);
+        display: block;
+        color: $black;
+        margin-bottom: 10px;
+    }
+}
+
+.field--radio {
+    label {
+        display: inline-block;
+    }
+}
+
+.field--inline {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.field-group {
+    font-size: 0;
+}

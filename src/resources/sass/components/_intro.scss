@@ -1,0 +1,67 @@
+/**
+ * Intro Section on Home
+ */
+
+.intro {
+    background-image: url("../images/intro-freedom-2.jpeg");
+    background-size: cover;
+    background-position: 50%;
+    height: 500px;
+    max-height: 500px;
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+
+.intro--alt {
+    background-image: url("../images/intro-freedom-1.jpeg");
+}
+
+.intro--about {
+    background-image: url("../images/intro-stairs.jpg");
+}
+
+.intro--fire {
+    background-image: url("../images/intro-feet-fire.jpeg");
+}
+
+.intro-content {
+    display: block;
+    position: relative;
+
+    padding-top: $padding-lg;
+    @include padding-x($padding-xl-sizes);
+    padding-bottom: $padding-md;
+
+    width: 60%;
+
+    @include breakpoint(tablet) {
+        width: 80%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+}
+
+.intro-content--alt {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+}
+
+.intro-content__title {
+    margin-bottom: 0;
+}
+
+.intro-content__content {
+    width: 60%;
+    margin: auto;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}

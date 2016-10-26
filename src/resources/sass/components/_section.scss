@@ -1,0 +1,144 @@
+.section {
+    @include padding-y($padding-lg-sizes);
+    position: relative;
+    /*display: block;*/
+    overflow: hidden;
+    z-index: 3;
+}
+
+.section--padding-lg {
+    @include padding-y($padding-xxl-sizes);
+}
+
+.section--black {
+    background-color: $black;
+    border: 1px solid $black;
+
+    color: $white;
+
+    p {
+        color: $white;
+
+        &.section__sub-title {
+            color: $pink;
+        }
+    }
+}
+
+.section--overlayed {
+    background: url('../images/restaurant/bar-header--overlayed.png');
+    background-color: lighten($black, 20%);
+    background-blend-mode: multiply;
+}
+
+.section--grey {
+    background-color: $grey--light;
+
+    color: $black;
+
+    p {
+        color: $black;
+    }
+}
+
+.section--grey-spun {
+    background-color: $grey--spun;
+    border: 0;
+
+    color: $white;
+
+    p {
+        color: $white;
+    }
+
+    padding-bottom: 0;
+}
+
+.section--process {
+    background-image: url('../images/process/discovery-stage.png');
+    background-blend-mode: multiply;
+}
+
+.section--padding-small {
+    @include padding-y($padding-md-sizes);
+}
+
+.section--padding-bottom-none {
+    padding-bottom: 0;
+}
+
+.section--padding-top-none {
+    padding-top: 0;
+    margin-top: 200px;
+    overflow: visible;
+
+    @include breakpoint(mobile) {
+        margin-top: $margin-xl;
+    }
+}
+
+.section__title {
+    @include rem($base-px--medium);
+    font-family: $sub-font;
+    color: $pink;
+    margin-top: $margin-lg;
+    margin-bottom: $margin-lg;
+
+    border-bottom: 3px solid $pink;
+    padding-bottom: $padding-sm;
+    font-weight: 200;
+}
+
+.section__sub-title {
+    @include rem($base-px--medium);
+    font-family: $sub-font;
+    color: $pink;
+    margin-top: 0;
+}
+
+.section__content {
+    @include width($md-width-sizes);
+    margin-top: $margin-lg;
+    margin-bottom: $margin-lg;
+}
+
+.section__content--tight {
+    margin-top: 0;
+}
+
+.section__image-over {
+    margin: auto;
+    margin-top: -130px;
+    z-index: 4;
+    display: block;
+    position: relative;
+    width: $width-sm;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        margin-top: -80px;
+    }
+}
+
+/**
+ * Section cut
+ */
+
+.section__polygon--top {
+    position: absolute;
+    top: -19px;
+    left: -2px;
+    right: 0;
+    height: 20px;
+    z-index: 999999;
+}
+
+.section__polygon--bottom {
+    position: absolute;
+    bottom: -19px;
+    height: 20px;
+    width: 100%;
+    left: -2px;
+    right: 0;
+    z-index: 999;
+}

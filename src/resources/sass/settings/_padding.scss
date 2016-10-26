@@ -1,0 +1,54 @@
+/**
+ * Padding Settings
+ */
+
+$padding-xs: 5px;
+$padding-sm: 10px;
+$padding-md: 20px;
+$padding-lg: 40px;
+$padding-xl: 80px;
+$padding-xxl: 160px;
+
+// Generic X axis
+
+$padding-x-sm: $padding-sm;
+$padding-x-md: $padding-md;
+$padding-x-lg: $padding-lg;
+
+// Generic Y axis
+
+$padding-y-sm: $padding-sm;
+$padding-y-md: $padding-md;
+$padding-y-lg: $padding-lg;
+
+// Generic XY axis
+
+$padding-sm-sizes: (
+    desktop: $padding-sm,
+    tablet: ($padding-sm),
+    mobile: ($padding-sm)
+);
+
+$padding-md-sizes: (
+    desktop: $padding-md,
+    tablet: ($padding-md)-10,
+    mobile: ($padding-md)-10
+);
+
+$padding-lg-sizes: (
+    desktop: $padding-lg,
+    tablet: ($padding-lg)-20,
+    mobile: ($padding-lg)-20
+);
+
+$padding-xl-sizes: (
+    desktop: $padding-xl,
+    tablet: ($padding-xl)-10,
+    mobile: ($padding-xl)-20
+);
+
+$padding-xxl-sizes: (
+    desktop: $padding-xxl,
+    tablet: ($padding-xxl)-10,
+    mobile: ($padding-xxl)-40
+);

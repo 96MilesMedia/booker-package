@@ -1,0 +1,264 @@
+.blog {
+
+}
+
+/**
+ * Blog List
+ */
+
+.blog-list {
+    text-align: left;
+    display: block;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        .blog-list__image {
+            &:after {
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+.blog-list__image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    transition: 0.2;
+
+    &:after {
+        content: "";
+        position: absolute;
+        transition: all 0.2s ease-in;
+        width: 100%;
+        height: 98%;
+        display: block;
+        background: $pink;
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+}
+
+.blog-list__title {
+    margin-top: $margin-sm;
+    margin-bottom: 0;
+}
+
+.blog-list__posted {
+    color: $grey;
+    margin-top: $margin-sm;
+    @extend .body--small;
+}
+
+.blog-list-content {
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+}
+
+/**
+ * Blog Post
+ */
+
+.blog-post {
+    width: $width-md-lg;
+    margin: auto;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.blog-post-head {
+    padding-bottom: $padding-lg;
+}
+
+.blog-post__info {
+    margin-top: 0;
+}
+
+.blog-post__title {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.blog-post__body {
+    text-align: left;
+    margin-bottom: $margin-lg;
+    color: $black;
+
+    p {
+        @include font-size($font-sizes-sm);
+
+        strong {
+            font-weight: 800;
+        }
+    }
+
+    img {
+        width: $width-lg;
+        text-align: center;
+        margin: auto;
+        margin-top: $margin-md;
+        margin-bottom: $margin-md;
+        margin-left: 10%;
+
+        @include breakpoint(mobile) {
+            margin: auto;
+            width: 100%;
+        }
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center;
+        @extend .title;
+        @extend .title--secondary;
+        font-weight: 800;
+        margin-top: $margin-lg;
+        margin-bottom: $margin-lg;
+    }
+
+    h4 {
+        text-align: left;
+        margin-bottom: $margin-md;
+    }
+
+    h5 {
+        @extend .title;
+        @extend .title--secondary;
+        font-weight: 800;
+        @include font-size($font-sizes-sm);
+    }
+
+    hr {
+        display: block;
+        border: none;
+        background: url("../images/line-break.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 40px;
+        position: relative;
+        margin: 0;
+        margin: auto;
+        margin-top: $margin-xl;
+        margin-bottom: $margin-xl;
+
+        @include breakpoint(mobile) {
+            margin-top: $margin-lg;
+            margin-bottom: $margin-lg;
+
+            width: 100px;
+            height: 20px;
+        }
+    }
+}
+
+.blog-post__body p:first-of-type {
+    font-weight: 800;
+    font-family: $sub-font;
+    margin-bottom: 0;
+    @include rem($base-px--md-lg);
+
+    @include breakpoint(mobile) {
+        @include rem($base-px--medium);
+    }
+}
+
+/*.blog {
+    width: $width-md-lg;
+    margin: auto;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        width: $width-xl;
+    }
+}
+
+.blog-list {
+
+}
+
+.blog-post {
+
+}
+
+.blog-post__wrap {
+    margin-top: $margin-lg;
+}
+
+.blog-post__title {
+    color: $black;
+}
+
+.blog-post__info {
+    font-family: $sub-font;
+    color: $pink;
+}
+
+.blog-post__body {
+    text-align: left;
+    margin-top: $margin-md;
+    margin-bottom: $margin-lg;
+    color: $black;
+
+    img {
+        width: $width-md;
+        text-align: center;
+        margin: auto;
+        margin-top: $margin-md;
+        margin-bottom: $margin-md;
+        margin-left: 18%;
+
+        @include breakpoint(mobile) {
+            margin: auto;
+            width: 100%;
+        }
+    }
+}
+
+.blog-post__body p:first-of-type {
+    @include rem($base-px--md-lg);
+
+    @include breakpoint(mobile) {
+        @include rem($base-px--medium);
+    }
+}
+
+.blog-post__body--list {
+    text-align: center;
+}*/
+
+/**
+ * Pagination (Move into own component)
+ */
+
+.pagination {
+    list-style: none;
+
+    text-align: center;
+    margin-top: $margin-lg;
+}
+
+.pagination__item {
+    display: inline-block;
+    font-family: $main-font;
+    @include rem($base-px--sm-md);
+    padding: $padding-sm;
+
+    a {
+        color: lighten($grey, 20%);
+        transition: color 0.25s ease-in-out;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.pagination__item--active {
+    a {
+        color: $black;
+    }
+}

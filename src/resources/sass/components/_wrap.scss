@@ -1,0 +1,22 @@
+.wrap {
+    width: $width-wrap;
+    max-width: $width-max-max;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        width: 90%;
+    }
+}
+
+.wrap--pull {
+    margin-top: -400px;
+}
+
+.wrap--full {
+    width: $width-xxl;
+    margin: auto;
+    max-width: $width-max-max;
+}

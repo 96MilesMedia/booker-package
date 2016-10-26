@@ -1,0 +1,44 @@
+* {
+    @include box-sizing(border-box);
+}
+
+html {
+    font-size: $base-px;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+body {
+    font-family: $main-font;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.03em;
+    -webkit-text-size-adjust: none;
+    background: $white--off;
+    transition: all 0.6 ease-in;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: underline;
+    color: $grey;
+}
+
+.outer-wrapper {
+    background: $white--off;
+    max-width: $width-max-max;
+    margin: auto;
+}
+
+.container {
+    position: relative;
+    /*padding-top: $padding-lg;*/
+
+    @include breakpoint(mobile) {
+        /*padding-top: $padding-sm;*/
+    }
+}

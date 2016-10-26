@@ -1,0 +1,104 @@
+/**
+ * Margins
+ */
+
+.margin-top-none {
+    margin-top: 0;
+}
+
+.margin-top-md {
+    margin-top: $margin-md;
+}
+
+.margin-top-lg {
+    margin-top: $margin-lg;
+}
+
+.margin-bottom-lg {
+    margin-bottom: $margin-lg;
+}
+
+.margin-bottom-md {
+    margin-bottom: $margin-md;
+}
+
+.margin-bottom-sm {
+    margin-bottom: $margin-sm;
+}
+
+.margin-top-xl {
+    margin-top: $margin-xl;
+}
+
+.margin-top-xxl {
+    margin-top: $margin-xxl;
+}
+
+.margin-bottom-xl {
+    margin-bottom: $margin-xl;
+}
+
+.margin-center {
+    margin: auto;
+}
+
+.margin-left-sm {
+    margin-left: $margin-sm;
+}
+
+.margin-right-sm {
+    margin-right: $margin-sm;
+}
+
+.margin-left-md {
+    margin-left: $margin-md;
+}
+
+.margin-right-md {
+    margin-right: $margin-md;
+}
+
+
+/**
+ * Paddings
+ */
+
+/**
+ * Paddings
+ */
+
+.padding-top-sm {
+    padding-top: $padding-sm;
+}
+
+.padding-bottom-sm {
+    padding-bottom: $padding-sm;
+}
+
+.padding-top-md {
+    padding-top: $padding-md;
+}
+
+.padding-bottom-md {
+    padding-bottom: $padding-md;
+}
+
+.padding-top-lg {
+    padding-top: $padding-lg;
+}
+
+.padding-bottom-lg {
+    padding-bottom: $padding-lg;
+}
+
+.padding-sm {
+    @include padding($padding-sm);
+}
+
+.padding-x-lg {
+    @include padding-x($padding-lg-sizes);
+}
+
+.padding-y-lg {
+    @include padding-y($padding-lg-sizes);
+}

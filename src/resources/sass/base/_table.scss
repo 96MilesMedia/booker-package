@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+        &:nth-of-type(odd) {
+            // background: #eee;
+        }
+    }
+
+    th {
+        background: $black;
+        color: white;
+        font-family: montserratregular;
+    }
+
+    td, th {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left
+    }
+}

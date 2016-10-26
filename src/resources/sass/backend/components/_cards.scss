@@ -1,0 +1,78 @@
+/**
+ * Booking Cards
+ * -----------------------
+ *
+ * Display the booking information
+ */
+
+.card-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-event.mdl-card {
+  /*width: 256px;*/
+  /*height: 256px;*/
+  background: #3E4EB8;
+  width: 100%;
+}
+
+.card-event.mdl-card--complete {
+    background: $grey;
+}
+
+.card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.card-event > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.card-event > .mdl-card__title,
+.card-event > .mdl-card__actions,
+.card-event > .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+
+.mdl-card__actions--alt {
+    background: $grey;
+}
+
+
+/**
+ * Information Cards
+ * -----------------------
+ *
+ * Used within the dashboard
+ */
+
+.info-card-wide.mdl-card {
+    width: 90%;
+    margin: auto;
+}
+.info-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../../backend/image/bookings.png') center / cover;
+}
+.info-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+.info-card-wide--pending > .mdl-card__title {
+    background: url('../../backend/image/pending.png') center / cover;
+}
+
+.info-card-wide--new > .mdl-card__title {
+    background: url('../../backend/image/new-booking.png') center / cover;
+}

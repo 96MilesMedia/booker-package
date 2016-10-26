@@ -1,0 +1,25 @@
+/**
+ * Newsletter
+ */
+
+.newsletter {
+    background: $brown;
+    color: $white;
+    padding-top: $padding-lg;
+    padding-bottom: $padding-lg;
+    position: relative;
+
+    .title, .body {
+        color: $white;
+    }
+}
+
+.newsletter__title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.newsletter__text {
+    margin-top: 0;
+    margin-bottom: 0;
+}

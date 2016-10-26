@@ -1,0 +1,57 @@
+.circle {
+    display: block;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: $white;
+    position: absolute;
+    top: -36px;
+
+    z-index: 10;
+
+    @include hoz-middle;
+
+    i {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding-top: $padding-md;
+        @include rem($base-px--medium);
+        color: $black;
+    }
+}
+
+.circle--bottom {
+    top: auto;
+    bottom: -46px;
+}
+
+.circle--icon-pink {
+    i {
+        color: $pink;
+    }
+}
+
+.circle--inverted {
+    background: $black;
+    z-index: 10;
+
+    i {
+        color: $white;
+    }
+}
+
+.circle--grey {
+    background-color: $border-grey--light;
+}
+
+.circle--small {
+    width: 60px;
+    height: 60px;
+    top: -28px;
+    z-index: -1;
+
+    i {
+        padding-top: ($padding-md)-14;
+    }
+}

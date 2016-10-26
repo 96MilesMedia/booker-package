@@ -1,0 +1,20 @@
+/**
+ * Buttons
+ */
+
+.mdl-button--colored--positive {
+    background: $green;
+    color: $white;
+
+    &:hover {
+        background: $green--dark;
+    }
+}
+
+.mdl-button--colored--neutral {
+    background: $grey;
+
+    &:hover {
+        background: darken($grey, 20%);
+    }
+}

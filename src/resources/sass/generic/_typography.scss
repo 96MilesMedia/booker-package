@@ -1,0 +1,46 @@
+/*------------------------*\
+ *      Typography
+ *------------------------*/
+
+/**
+ * Titles
+ */
+
+.title {
+    font-family: $sub-font;
+    color: $black;
+    @include letter-spacing(12);
+}
+
+.title--primary {
+    @include font-size($font-sizes-xxl);
+}
+
+.title--secondary {
+    @include font-size($font-sizes-md-lg);
+}
+
+/**
+ * Body
+ */
+
+.body {
+    font-family: $main-font;
+    color: $black;
+    line-height: 1.6;
+    @include font-size($font-sizes-md);
+    @include letter-spacing(14);
+}
+
+.body--alt {
+    color: $grey;
+}
+
+.body--small {
+    @include font-size($font-sizes-xs);
+}
+
+.body--medium {
+    @include font-size($font-sizes-sm);
+}
+

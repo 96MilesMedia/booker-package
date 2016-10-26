@@ -1,0 +1,75 @@
+@mixin width($width-map, $breakpoints: $breakpoints) {
+    @each $breakpoint, $r-width in $width-map {
+        @if $breakpoint == null {
+            width: $width-lg;
+        } @else {
+            @include breakpoint($breakpoint) {
+                width: $r-width;
+            }
+        }
+    }
+}
+
+@mixin height($height-map, $breakpoints: $breakpoints) {
+    @each $breakpoint, $r-height in $height-map {
+        @if $breakpoint == null {
+            height: $height-lg;
+        } @else {
+            @include breakpoint($breakpoint) {
+                height: $r-height;
+            }
+        }
+    }
+}
+
+@mixin font-size($font-size-map, $breakpoints: $breakpoints) {
+    @each $breakpoint, $r-font-size in $font-size-map {
+        @if $breakpoint == null {
+            @include rem($base-px);
+        } @else {
+            @include breakpoint($breakpoint) {
+                @include rem($r-font-size);
+            }
+        }
+    }
+}
+
+@mixin padding($padding-size-map, $breakpoints: $breakpoints) {
+    @each $breakpoint, $r-padding-size in $padding-size-map {
+        @if $breakpoint == null {
+            padding: $padding-sm;
+        } @else {
+            @include breakpoint($breakpoint) {
+                padding: $r-padding-size;
+            }
+        }
+    }
+}
+
+@mixin padding-y($padding-size-map, $breakpoints: $breakpoints) {
+    @each $breakpoint, $r-padding-size in $padding-size-map {
+        @if $breakpoint == null {
+            padding-top: $padding-sm;
+            padding-bottom: $padding-sm;
+        } @else {
+            @include breakpoint($breakpoint) {
+                padding-top: $r-padding-size;
+                padding-bottom: $r-padding-size;
+            }
+        }
+    }
+}
+
+@mixin padding-x($padding-size-map, $breakpoints: $breakpoints) {
+    @each $breakpoint, $r-padding-size in $padding-size-map {
+        @if $breakpoint == null {
+            padding-left: $padding-sm;
+            padding-right: $padding-sm;
+        } @else {
+            @include breakpoint($breakpoint) {
+                padding-left: $r-padding-size;
+                padding-right: $r-padding-size;
+            }
+        }
+    }
+}

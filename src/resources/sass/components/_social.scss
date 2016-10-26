@@ -1,0 +1,10 @@
+.social {
+    a {
+        margin-right: $margin-sm;
+        @include rem($base-px--medium);
+
+        @include breakpoint(mobile) {
+            @include rem($base-px--small);
+        }
+    }
+}

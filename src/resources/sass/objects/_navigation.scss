@@ -1,0 +1,48 @@
+.navigation {
+    list-style: none;
+    margin-left: 0;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+
+    @include clearfix;
+
+    > li {
+
+        &,
+        > a{
+            display: inline-block;
+           *display: inline;
+            zoom: 1;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.navigation--block {
+    text-align: left;
+    padding: 0;
+
+    a {
+        display: block;
+    }
+
+    > li {
+
+        &,
+        > a{
+            display: block;
+        }
+    }
+}
+
+.navigation--left {
+    text-align: left;
+}
+
+.navigation--right {
+    text-align: right;
+}

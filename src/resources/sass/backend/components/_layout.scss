@@ -1,0 +1,39 @@
+/**
+ * Generic Layout Classes
+ */
+
+.page-wrap {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+/**
+ * Sections
+ * ------------------------------------
+ *
+ * Used for wrapping content sections in
+ * just to group content and provide
+ * seperation between componenets
+ */
+
+.section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section--padded-sides {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section--right {
+    text-align: right;
+}

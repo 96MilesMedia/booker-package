@@ -1,0 +1,110 @@
+/// Good old fashioned clearfix. Add to a container.
+@mixin clearfix {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+/// Use the floated psueod element trick to give an element an aspect ratio
+///
+/// @param {int} $aspect The desired aspect ratio as width/height
+/// @param {string} $gutter the horizontal gutter including units
+@mixin aspect($aspect, $gutter: 0px) {
+    overflow: hidden;
+
+    &:before {
+        float: left;
+        content: "";
+        padding-bottom: 100% / $aspect;
+        margin-bottom: -$gutter / $aspect;
+    }
+
+    @include clearfix;
+}
+
+/// Convert font sizes in pixels to rems
+///
+/// @param {int} $pixels The desired aspect ratio as width/height
+@mixin rem($pixels) {
+    font-size: $pixels;
+    font-size: ($pixels / $base-px) * 1rem;
+}
+
+/// Wrap content in an appropriate media query
+///
+/// @parameter {string} $point The named breakpoint
+@mixin breakpoint($point) {
+    @if map-get($breakpoints, $point) {
+        @media screen and (unquote(map-get($breakpoints, $point))) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); // IE8
+}
+
+@mixin svg($filename) {
+    background: url('../images/#{$filename}.png') no-repeat;
+
+    .svg & {
+        background-image: url('../images/#{$filename}.svg');
+    }
+}
+
+@mixin letter-spacing($value) {
+    $value: ($value/1000);
+    letter-spacing: #{$value}em;
+}
+
+/*-----------------------------------------
+
+    Prefix for box-sizing
+
+    @author Ashley Banks <ashley@d3r.com>
+
+-------------------------------------------*/
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model;
+          box-sizing: $box-model;
+}
+
+@mixin remove-white-space {
+    font-size: 0 !important;
+    letter-spacing: normal;
+    word-spacing: normal;
+    & > * {
+        display: inline-block;
+        @include rem(14px);
+    }
+}
+
+@mixin grid-gutter($gutter-x:$grid-gutter-h, $gutter-y:$grid-gutter-v) {
+    margin-right: -($gutter-x);
+    > * {
+        padding-right: $gutter-x;
+        margin-bottom: $gutter-y;
+    }
+    // Use the correct negative margin for flush bottom
+    &.grid--flush-bottom {
+        margin-bottom: -($gutter-y);
+    }
+}
+
+@mixin flush-last-child {
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}

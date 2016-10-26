@@ -1,0 +1,12 @@
+{
+    "name": "twentysix/booker",
+    "description": "Booking System with Google Material Design Components and VueJs",
+    "authors": [
+        {
+            "name": "Twenty Six Digital Ltd",
+            "email": "info@twentysixdigital.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

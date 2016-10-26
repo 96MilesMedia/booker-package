@@ -1,0 +1,28 @@
+.quote {
+    @include font-size($font-sizes-md-lg);
+    font-family: $main-font;
+    line-height: 1.6;
+    @include width($lg-width-sizes);
+    margin: auto;
+    color: $grey;
+    font-style: italic;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.quote__desc {
+
+}
+
+.quote__author {
+    margin-top: $margin-md;
+    /*font-family: $sub-font;*/
+
+    cite {
+        font-style: normal;
+        @include font-size($font-sizes-sm);
+        /*font-weight: bold;*/
+    }
+}

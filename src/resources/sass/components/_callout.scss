@@ -1,0 +1,60 @@
+/**
+ * Callouts used across the site
+ */
+
+.callout {
+    background: $white;
+    padding-top: $margin-xl;
+    padding-bottom: $margin-xl;
+    position: relative;
+    display: block;
+    margin-top: $margin-xl;
+
+    @include breakpoint(mobile) {
+        margin-top: $margin-lg;
+        padding-top: $margin-lg;
+        padding-bottom: $margin-lg;
+    }
+}
+
+.callout--third {
+    .callout-content {
+        width: 80%;
+        margin: auto;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            text-align: center !important;
+        }
+    }
+}
+
+.callout--centered {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: $margin-lg;
+}
+
+.callout-content {
+
+}
+
+.callout-content__text-left {
+    text-align: left;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
+}
+
+.callout__image {
+    width: 50%;
+    margin: auto;
+}
+
+.callout__link {
+    display: block;
+    color: $pink;
+    margin-bottom: $margin-md;
+}

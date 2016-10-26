@@ -1,0 +1,24 @@
+.resource {
+    margin-top: $margin-lg;
+}
+
+.resource__title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.resource__content {
+
+}
+
+.resource__image {
+    border: 8px solid $white;
+}
+
+.resource__image--small {
+    max-width: 100px;
+}
+
+.resource__btn {
+    margin-top: $margin-md;
+}

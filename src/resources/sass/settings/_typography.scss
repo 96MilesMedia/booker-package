@@ -1,0 +1,72 @@
+/*----------------------------*\
+
+    Typography Settings
+
+-------------------------------*/
+
+// Font Sizes
+
+$base-px: 14px;
+$base-px--x-small: ($base-px)-2;
+$base-px--small: 16px;
+$base-px--sm-md: 20px;
+$base-px--medium: 22px;
+$base-px--md-lg: 34px;
+$base-px--large: 54px;
+$base-px--xl: 64px;
+
+// Font Size Maps
+
+$font-sizes-xs: (
+    desktop: $base-px--small,
+    tablet: ($base-px--small),
+    mobile: ($base-px--small),
+);
+
+$font-sizes-sm: (
+    desktop: $base-px--sm-md,
+    tablet: ($base-px--sm-md)-5,
+    mobile: ($base-px--sm-md)-5,
+);
+
+$font-sizes-md: (
+    desktop: $base-px--medium,
+    tablet: ($base-px--medium),
+    mobile: ($base-px--medium)-5,
+);
+
+$font-sizes-md-lg: (
+    desktop: $base-px--md-lg,
+    tablet: ($base-px--md-lg)-5,
+    mobile: ($base-px--md-lg)-5,
+);
+
+$font-sizes-lg: (
+    desktop: $base-px--large,
+    tablet : ($base-px--large)-10,
+    mobile : ($base-px--large)-10
+);
+
+$font-sizes-xl: (
+    desktop: $base-px--xl,
+    tablet: ($base-px--xl)-10,
+    mobile: ($base-px--xl)-30
+);
+
+$font-sizes-xxl: (
+    desktop: ($base-px--xl)+10,
+    tablet: ($base-px--xl)-10,
+    mobile: ($base-px--xl)-30
+);
+
+// Letter spacings
+
+$letter-spacing: 0.02em;
+$letter-spacing--md: 0.04em;
+$letter-spacing--lg: 100;
+
+// Line heights
+
+$line-height: 1.1;
+$line-height--sm: 1.2;
+$line-height--md: 1.4;

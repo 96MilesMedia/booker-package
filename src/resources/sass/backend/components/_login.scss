@@ -1,0 +1,45 @@
+/**
+ * Login Screen Components
+ */
+
+.login-section {
+    padding-top: $padding-xxl;
+    padding-bottom: $padding-xxl;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        padding-top: $padding-lg;
+        padding-bottom: $padding-lg;
+    }
+}
+
+.login-section__intro {
+
+}
+
+.login-form {
+    width: 40%;
+    margin: auto;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.login-form-footer {
+    padding-top: $padding-md;
+    text-align: right;
+    width: 90%;
+    margin: auto;
+}
+
+
+/**
+ * Settings
+ */
+
+.user-settings {
+    padding-top: $padding-md;
+    padding-bottom: $padding-md;
+}

@@ -1,0 +1,228 @@
+$breakpoints: (
+    desktop: "min-width: 1000px",
+    tablet: "max-width: 999px",
+    mobile: "max-width: 600px"
+) !default;
+
+$sizes: (
+    l: false,
+    m: tablet,
+    s: mobile
+) !default;
+
+$grid-gutter-h: 30px !default;
+$grid-gutter-v: 30px !default;
+
+@each $name in map-keys($sizes) {
+    @include breakpoint(map-get($sizes, $name)) {
+        .#{$name}-full,
+        .#{$name}-three-thirds,
+        .#{$name}-four-quarters,
+        .#{$name}-five-fifths,
+        .#{$name}-six-sixths,
+        .#{$name}-ten-tenths,
+        .#{$name}-twelve-twelfths {
+            width: 100%;
+        }
+        .#{$name}-eleven-twelfths {
+            width: 100% * 11 / 12;
+        }
+        .#{$name}-nine-tenths {
+            width: 90%;
+        }
+        .#{$name}-five-sixths,
+        .#{$name}-ten-twelfths {
+            width: 100% * 5 / 6;
+        }
+        .#{$name}-four-fifths,
+        .#{$name}-eight-tenths {
+            width: 100% * 4 / 5;
+        }
+        .#{$name}-three-quarters,
+        .#{$name}-nine-twelfths {
+            width: 100% * 3 / 4;
+        }
+        .#{$name}-seven-tenths {
+            width: 100% * 7 / 10;
+        }
+        .#{$name}-two-thirds,
+        .#{$name}-four-sixths,
+        .#{$name}-eight-twelfths {
+            width: 100% * 2 / 3;
+        }
+        .#{$name}-three-fifths,
+        .#{$name}-six-tenths {
+            width: 100% * 3 / 5;
+        }
+        .#{$name}-seven-twelfths {
+            width: 100% * 7 / 12;
+        }
+        .#{$name}-one-half,
+        .#{$name}-two-quarters,
+        .#{$name}-three-sixths,
+        .#{$name}-five-tenths {
+            width: 50%;
+        }
+        .#{$name}-five-twelfths {
+            width: 100% * 5 / 12;
+        }
+        .#{$name}-two-fifths,
+        .#{$name}-four-tenths {
+            width: 100% * 2 / 5;
+        }
+        .#{$name}-one-third,
+        .#{$name}-two-sixths,
+        .#{$name}-four-twelfths {
+            width: 100% * 1 / 3;
+        }
+        .#{$name}-three-tenths {
+            width: 100% * 3 / 10;
+        }
+        .#{$name}-one-quarter,
+        .#{$name}-three-twelfths {
+            width: 100% * 1 / 4;
+        }
+        .#{$name}-one-fifth,
+        .#{$name}-two-tenths {
+            width: 100% * 1 / 5;
+        }
+        .#{$name}-one-sixth,
+        .#{$name}-two-twelfths {
+            width: 100% * 1 / 6;
+        }
+        .#{$name}-one-tenth {
+            width: 100% * 1 / 10;
+        }
+        .#{$name}-one-twelfth {
+            width: 100% * 1 / 12;
+        }
+
+        .#{$name}-leftcol {
+            margin-bottom: $grid-gutter-v;
+            float: left;
+            padding: 0 20px 0 0;
+            margin-right: 20px;
+        }
+        .#{$name}-rightcol {
+            margin-bottom: $grid-gutter-v;
+            float: right;
+            padding: 0 0 0 20px;
+            margin-left: 20px;
+        }
+        .#{$name}-leftcol + .#{$name}-rightcol {
+            margin-left: 0px;
+        }
+        .#{$name}-right + .#{$name}-leftcol {
+            margin-right: 0px;
+        }
+        .#{$name}-onecol {
+            width: auto;
+            float: none;
+            padding: 0;
+            margin: 0 0 $grid-gutter-v;
+        }
+    }
+}
+/*
+.grid {
+    position: relative;
+    margin: -$grid-gutter / 2;
+    display: block;
+    font-size: 0;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    & > * {
+        @include rem($base-px);
+
+        display: inline-block;
+        padding: $grid-gutter / 2;
+        vertical-align: top;
+
+        *display: inline-block;
+        zoom: 1;
+    }
+
+    .col {
+        border: 1px solid red;
+        position: relative;
+        display: inline-block;
+        display: -moz-inline-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: $grid-gutter / 2;
+        float: left;
+        vertical-align: top;
+    }
+}*/
+
+.grid-wrap {
+    /*overflow: hidden;*/
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.grid {
+    display: block;
+    position: relative;
+    margin: -$grid-gutter / 2;
+    padding: 0;
+    font-size: 0;
+    letter-spacing: normal;
+    text-align: center;
+
+    -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+.grid > * {
+    display: inline-block;
+    vertical-align: top;
+    @include rem($base-px);
+    /*margin: 0 0 30px;*/
+    padding: $grid-gutter / 2;
+
+    -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+.grid--left {
+    text-align: left;
+}
+
+.grid--tight {
+    & > * {
+        padding: 0;
+        margin-bottom: -10px;
+    }
+    margin: 0;
+}
+
+.grid--tight-sides {
+    & > * {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+        & > * {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.grid--push {
+    margin-top: 40px;
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+    }
+}
+
+.grid--push-bottom {
+    margin-bottom: 40px;
+}

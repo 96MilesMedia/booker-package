@@ -1,0 +1,76 @@
+// Screen size
+$width-wrap: 90%;
+$width-max-max: 2400px;
+
+
+// Heights
+
+$height-md: 350px;
+$height-lg: 400px;
+$height-xl: 500px;
+
+$xl-height-sizes: (
+    desktop: $height-xl,
+    tablet: $height-lg,
+    mobile: $height-md
+);
+
+// Generic Percentage widths
+
+$width-xxl: 100%;
+$width-xl: 90%;
+$width-lg: 80%;
+$width-md-lg: 70%;
+$width-md: 60%;
+$width-sm: 40%;
+$width-xs: 20%;
+
+// Size Maps
+
+$xs-width-sizes: (
+    desktop: $width-xs,
+    tablet: $width-sm,
+    mobile: $width-md
+);
+
+$sm-width-sizes: (
+    desktop: $width-sm,
+    tablet: $width-md,
+    mobile: $width-xl
+);
+
+$md-width-sizes: (
+    desktop: $width-md,
+    tablet: $width-lg,
+    mobile: $width-xl
+);
+
+$lg-width-sizes: (
+    desktop: $width-lg,
+    tablet: $width-lg,
+    mobile: $width-md
+);
+
+
+// Logo dimensions
+
+$width-logo: 240px;
+$height-logo: 50px;
+
+$media-logo: 180px;
+
+// Callouts
+
+$width-callout: 600px;
+$width-callout--half: ($width-callout) / 2;
+
+// Borders
+
+$width-border-button: 3px;
+$width-border-button--small: 1px;
+
+// Border Radius
+
+$width-border-radius: 8px;
+
+$width-border-radius--lg: 31px;

@@ -1,0 +1,23 @@
+.hoz-rule {
+    width: 80%;
+    height: 8px;
+    border: none;
+    background: $grey;
+}
+
+.page-break {
+    background: url('../images/breaks/page-split.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 120px;
+    height: 14px;
+}
+
+.line {
+    display: block;
+    width: 38px;
+    height: 2px;
+    background-color: $pink;
+}

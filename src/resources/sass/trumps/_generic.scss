@@ -1,0 +1,313 @@
+/**
+ * Display operator
+ */
+
+.hide {
+    display: none;
+}
+
+.s-display {
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
+.l-display {
+    display: block;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+/**
+ * Typography
+ */
+
+.decor {
+    color: $yellow;
+}
+
+.underline {
+    /*border-bottom: 1px solid $pink;*/
+    /*display: inline-block;*/
+    /*padding-bottom: $padding-sm;*/
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-black {
+    color: $black;
+}
+
+.text-pink {
+    color: $pink;
+}
+
+.text-grey {
+    color: $grey;
+}
+
+.text-grey--light {
+    color: lighten($grey, 40%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-left--desktop {
+    text-align: left;
+    @include breakpoint(mobile) {
+        text-align: right;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+/**
+ * Generic text sizings
+ */
+
+.text-small {
+    @include rem($base-px);
+}
+
+.text-sm-md {
+    @include rem($base-px--sm-md);
+}
+
+.text-medium {
+    @include rem($base-px--medium);
+}
+
+.text-large {
+    @include rem($base-px--large);
+}
+
+/**
+ * Text Transforms
+ */
+
+.captialize {
+    text-transform: uppercase;
+}
+
+.decaptialize {
+    text-transform: lowercase;
+}
+
+.underline {
+    padding-bottom: 0px;
+    border-bottom: 4px solid $pink;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+        line-height: 1.6;
+    }
+}
+
+/**
+ * Backgrounds
+ */
+
+.bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bg-cover--fixed {
+    background-position: fixed;
+}
+
+.bg-overlay {
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+
+.bg-overlay--bottom {
+    &:before {
+        background: linear-gradient(to top,rgba(0,0,0,.8) 25%,rgba(255,255,255,0) 75%);
+    }
+}
+
+.bg-overlay--right {
+    &:before {
+        background: linear-gradient(to left,rgba(0,0,0,.8) 0,rgba(255,255,255,0) 55%);
+
+        @include breakpoint(tablet) {
+            background: linear-gradient(to top,rgba(0,0,0,.8) 25%,rgba(255,255,255,0) 75%);
+        }
+    }
+}
+
+.bg-overlay--left {
+    &:before {
+        background: linear-gradient(to right,rgba(0,0,0,.8) 0,rgba(255,255,255,0) 100%);
+
+        @include breakpoint(tablet) {
+            background: linear-gradient(to top,rgba(0,0,0,.8) 25%,rgba(255,255,255,0) 75%);
+        }
+    }
+}
+
+.bg-overlay-white {
+    background: -webkit-linear-gradient(top,hsla(0,0%,98%,.9),hsla(0,0%,98%,.92) 72%,#f9f9f9);
+    background: linear-gradient(180deg,hsla(0,0%,98%,.9) 0,hsla(0,0%,98%,.92) 72%,#f9f9f9);
+    width: 100%;
+    height: 100%;
+}
+
+.bg-overlay-white--weak {
+    background: -webkit-linear-gradient(top,hsla(0,0%,90%,.8),hsla(0,0%,90%,.92) 72%,#f9f9f9);
+    background: linear-gradient(180deg,hsla(0,0%,90%,.8) 0,hsla(0,0%,90%,.92) 72%,#f9f9f9);
+    width: 100%;
+    height: 100%;
+}
+
+
+/**
+ * Widths
+ */
+
+.width-sm {
+    @include width($sm-width-sizes);
+}
+
+.width-md {
+    @include width($md-width-sizes);
+}
+
+.width-lg {
+    @include width($lg-width-sizes);
+}
+
+/**
+ * Video
+ */
+
+.video-frame {
+    width: 50%;
+    height: 330px;
+    margin: auto;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/**
+ * Images
+ */
+
+.img {
+    width: 24%;
+}
+
+.img--sm-md {
+    width: 34%;
+}
+
+.img--medium {
+    width: 50%;
+}
+
+.img--large {
+    width: 75%;
+
+    @include breakpoint(mobile) {
+        width: 90%
+    }
+}
+
+.img--abs {
+    position: absolute;
+}
+
+.img--right {
+    top: 10%;
+    right: -4%;
+    z-index: 0;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.img--top {
+    top: 2%;
+}
+
+.img--right-out {
+    right: -10%;
+}
+
+.stripe-logo {
+    max-width: 118px;
+}
+
+.secure-trading-logo {
+    max-width: 176px;
+}
+
+.world-pay-logo {
+    max-width: 154px;
+}
+
+// While adsense awaits having this
+.img-home-temp {
+    width: 80%;
+    margin: auto;
+    margin-top: $margin-lg;
+
+    border-radius: 6px;
+}
+
+/**
+ * Decorate
+ */
+
+.shadow {
+    /*-webkit-box-shadow: 0px 12px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 12px 5px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 12px 5px 1px rgba(0, 0, 0, 0.75);*/
+}
+
+.shadow-full {
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.border-radius {
+    border-radius: $width-border-radius;
+}
+
+.border-radius--lg {
+    border-radius: $width-border-radius--lg;
+}

@@ -1,0 +1,44 @@
+.btn {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-family: $sub-font;
+    text-transform: uppercase;
+    font-weight: 800;
+    @include font-size($font-sizes-sm);
+    @include letter-spacing(100);
+
+    text-decoration: none !important;
+
+    &:hover {
+        transition: 0.2s ease-in;
+    }
+}
+
+.btn--cta {
+    background: $green--dark;
+    color: $white;
+
+    &:hover {
+        background: $green;
+    }
+}
+
+.btn--primary {
+    padding: $padding-md;
+    padding-right: $padding-lg;
+    padding-left: $padding-lg;;
+    color: $white;
+    background: $pink;
+    border-radius: 50px;
+    font-weight: 300;
+
+    &:hover {
+        background: darken($pink, 20%);
+    }
+}
+
+.btn--small {
+    @include font-size($font-sizes-xs);
+}

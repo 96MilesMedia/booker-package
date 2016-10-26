@@ -1,0 +1,13 @@
+.indent {
+    padding-top: $padding-sm;
+    padding-bottom: $padding-sm;
+    padding-left: $padding-md;
+    font-style: italic;
+    border-left: 4px solid $grey--light;
+    margin-left: $margin-lg;
+
+    p {
+        color: $pink;
+        @include rem($base-px--medium);
+    }
+}

@@ -1,0 +1,20 @@
+.contact {
+
+}
+
+.contact__link {
+    text-decoration: none;
+    margin-top: 4px;
+    a {
+        color: $pink;
+        @include rem($base-px--small);
+
+        &:hover {
+            color: darken($pink, 20%);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+    }
+}
