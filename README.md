@@ -15,7 +15,7 @@ Ensure the autoload is set in composer.json:
     ],
     "psr-4": {
         "App\\": "app/",
-        "Twentysix\\Booker\\": "packages/twentysix/booker/src"
+        "Twentysix\\Booker\\": "vendor/twentysix/booker/src"
     }
 },
 ```
